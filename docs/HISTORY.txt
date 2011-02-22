@@ -1,0 +1,11 @@
+Changelog
+=========
+
+0.5 - Unreleased
+----------------
+
+* i18n support [erico_andrei]
+
+* Countdown portlet [davilima]
+
+* Initial release [erico_andrei]
