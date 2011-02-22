@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.5 - Unreleased
+1.0 (2011-02-22)
 ----------------
 
 * i18n support [erico_andrei]
