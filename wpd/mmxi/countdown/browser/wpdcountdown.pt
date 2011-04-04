@@ -17,7 +17,7 @@ border-radius: 10px;
 
 <div class="portlet-wpd" i18n:domain="wpd.mmxi.countdown">
 
-    <a href="http://www.plone.org/wpd" title="World Plone Day">
+    <a href="http://www.plone.org/wpd" title="World Plone Day" i18n:attributes="href" >
         <img tal:attributes="src string:${context/@@plone_portal_state/portal_url}/++resource++wpd-logo.gif"
              alt="World Plone Day" />
     </a>
