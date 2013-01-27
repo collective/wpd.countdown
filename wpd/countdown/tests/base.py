@@ -18,21 +18,21 @@ def setup_product():
     # Load the ZCML configuration for this package and its dependencies
 
     fiveconfigure.debug_mode = True
-    import wpd.mmxi.countdown
-    zcml.load_config('configure.zcml', wpd.mmxi.countdown)
+    import wpd.countdown
+    zcml.load_config('configure.zcml', wpd.countdown)
     fiveconfigure.debug_mode = False
 
     # We need to tell the testing framework that these products
     # should be available. This can't happen until after we have loaded
     # the ZCML.
 
-    ztc.installPackage('wpd.mmxi.countdown')
+    ztc.installPackage('wpd.countdown')
 
 # The order here is important: We first call the deferred function and then
 # let PloneTestCase install it during Plone site setup
 
 setup_product()
-ptc.setupPloneSite(products=['wpd.mmxi.countdown'])
+ptc.setupPloneSite(products=['wpd.countdown'])
 
 
 class TestCase(ptc.PloneTestCase):

@@ -4,7 +4,7 @@
 
 __author__ = """Simples Consultoria <products@simplesconsultoria.com.br>"""
 __docformat__ = 'plaintext'
-PROJECTNAME = 'wpd.mmxi.countdown'
+PROJECTNAME = 'wpd.countdown'
 
 ADD_PERMISSIONS = {
     # -*- extra stuff goes here -*-

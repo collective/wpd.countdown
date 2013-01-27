@@ -15,7 +15,7 @@ border-radius: 10px;
 .wpd-date {color: #ffa100; padding: 10px;}
 </style>
 
-<div class="portlet-wpd" i18n:domain="wpd.mmxi.countdown">
+<div class="portlet-wpd" i18n:domain="wpd.countdown">
 
     <a href="http://www.plone.org/wpd" title="World Plone Day" i18n:attributes="href" >
         <img tal:attributes="src string:${context/@@plone_portal_state/portal_url}/++resource++wpd-logo.gif"

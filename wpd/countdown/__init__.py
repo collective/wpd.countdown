@@ -2,7 +2,7 @@
 
 from zope.i18nmessageid import MessageFactory as BaseMessageFactory
 
-from wpd.mmxi.countdown import config
+from wpd.countdown import config
 
 from Products.Archetypes import atapi
 from Products.CMFCore import utils
@@ -11,7 +11,7 @@ from Products.CMFCore import utils
 # This will be imported with the special name "_" in most modules. Strings
 # like _(u"message") will then be extracted by i18n tools for translation.
 
-MessageFactory = BaseMessageFactory('wpd.mmxi.countdown')
+MessageFactory = BaseMessageFactory('wpd.countdown')
 
 def initialize(context):
     """Initializer called when used as a Zope 2 product.

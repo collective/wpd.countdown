@@ -14,14 +14,14 @@ try:
 except ImportError:
     CACHEFU = False
 
-_PROJECT = 'wpd.mmxi.countdown'
-_PROFILE_ID = 'wpd.mmxi.countdown:default'
+_PROJECT = 'wpd.countdown'
+_PROFILE_ID = 'wpd.countdown:default'
 
 
 def doUpgrades(context):
     ''' If exists, run migrations
     '''
-    if context.readDataFile('wpd.mmxi.countdown.txt') is None:
+    if context.readDataFile'wpd.countdown.txt') is None:
         return
     logger = logging.getLogger(_PROJECT)
     site = context.getSite()

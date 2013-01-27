@@ -9,7 +9,7 @@ from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 from datetime import datetime
 
-from wpd.mmxi.countdown import MessageFactory as _
+from wpd.countdown import MessageFactory as _
 
 
 class IWPDcountdown(IPortletDataProvider):

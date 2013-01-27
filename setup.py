@@ -2,12 +2,12 @@
 from setuptools import setup, find_packages
 import os
 
-version = open(os.path.join("wpd", "mmxi", "countdown", "version.txt")).read().strip()
+version = '2.0'
 
-setup(name='wpd.mmxi.countdown',
+setup(name='wpd.countdown',
       version=version,
-      description="Countdown portlet for the World Plone Day 2011",
-      long_description=open(os.path.join("wpd", "mmxi", "countdown", "README.txt")).read() + "\n" +
+      description="Countdown portlet for the World Plone Days",
+      long_description=open(os.path.join("wpd", "countdown", "README.txt")).read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
@@ -23,7 +23,7 @@ setup(name='wpd.mmxi.countdown',
       url='http://svn.plone.org/svn/collective/',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
-      namespace_packages=['wpd', 'wpd.mmxi'],
+      namespace_packages=['wpd',],
       include_package_data=True,
       zip_safe=False,
       install_requires=[

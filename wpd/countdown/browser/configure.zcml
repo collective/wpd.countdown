@@ -5,12 +5,12 @@
     xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:plone="http://namespaces.plone.org/plone"
-    i18n_domain="wpd.mmxi.countdown">
+    i18n_domain="wpd.countdown">
 
 
   <!-- -*- extra stuff goes here -*- -->
   <plone:portlet
-	    name="wpd.mmxi.countdown.WPDcountdown"
+	    name="wpd.countdown.WPDcountdown"
 	    interface=".wpdcountdown.IWPDcountdown"
 	    assignment=".wpdcountdown.Assignment"
 	    view_permission="zope2.View"

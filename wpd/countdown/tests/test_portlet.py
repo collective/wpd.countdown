@@ -11,9 +11,9 @@ from plone.portlets.interfaces import IPortletRenderer
 
 from plone.app.portlets.storage import PortletAssignmentMapping
 
-from wpd.mmxi.countdown.browser import wpdcountdown
+from wpd.countdown.browser import wpdcountdown
 
-from wpd.mmxi.countdown.tests.base import TestCase
+from wpd.countdown.tests.base import TestCase
 
 
 class TestPortlet(TestCase):
@@ -24,9 +24,9 @@ class TestPortlet(TestCase):
     def test_portlet_type_registered(self):
         portlet = getUtility(
             IPortletType,
-            name='wpd.mmxi.countdown.WPDcountdown')
+            name='wpd.countdown.WPDcountdown')
         self.assertEquals(portlet.addview,
-                          'wpd.mmxi.countdown.WPDcountdown')
+                          'wpd.countdown.WPDcountdown')
 
     def test_interfaces(self):
         portlet = wpdcountdown.Assignment()
