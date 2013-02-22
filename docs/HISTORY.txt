@@ -1,6 +1,15 @@
 Changelog
 =========
 
+2.0 (unreleased)
+----------------
+
+* configlet for date and link
+  [Gomez]
+
+* renamed from wpd.mmxi.countdown to wpd.countdown
+  [Gomez]
+
 1.1 (unreleased)
 ----------------
 
