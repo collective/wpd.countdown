@@ -3,8 +3,6 @@ from zope.interface import implements
 from plone.portlets.interfaces import IPortletDataProvider
 from plone.app.portlets.portlets import base
 
-from zope.formlib import form
-
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 from datetime import datetime
@@ -17,6 +15,7 @@ from plone.registry.interfaces import IRegistry
 
 from wpd.countdown.browser.views import IWPDSchema
 
+
 class IWPDcountdown(IPortletDataProvider):
     """A portlet
 
@@ -24,6 +23,7 @@ class IWPDcountdown(IPortletDataProvider):
     data that is being rendered and the portlet assignment itself are the
     same.
     """
+
 
 class Assignment(base.Assignment):
     """Portlet assignment.
@@ -40,11 +40,13 @@ class Assignment(base.Assignment):
         """
         return _(u"WPD Countdown")
 
+
 class AddForm(base.NullAddForm):
     """Portlet add form.
     """
     def create(self):
         return Assignment()
+
 
 class Renderer(base.Renderer):
     """Portlet renderer.
@@ -55,12 +57,12 @@ class Renderer(base.Renderer):
         settings = registry.forInterface(IWPDSchema)
         wpd_date = settings.wpd_date
         return datetime(wpd_date.year, wpd_date.month, wpd_date.day)
-    
+
     def days(self):
         now = datetime.now()
-        today = datetime(now.year,now.month,now.day)
+        today = datetime(now.year, now.month, now.day)
         return (self.getDate() - today).days
-    
+
     def prettyDate(self):
         translation_service = getToolByName(self, 'translation_service')
         return translation_service.ulocalized_time(self.getDate())
@@ -69,17 +71,17 @@ class Renderer(base.Renderer):
         registry = getUtility(IRegistry)
         settings = registry.forInterface(IWPDSchema)
         return settings.wpd_url
- 
+
     @property
     def isToday(self):
-        return self.days()==0
+        return self.days() == 0
 
     @property
     def isPast(self):
-        return self.days()<0
-    
+        return self.days() < 0
+
     @property
     def isFuture(self):
-        return self.days()>0
+        return self.days() > 0
 
     render = ViewPageTemplateFile('wpdcountdown.pt')

@@ -7,7 +7,7 @@
 
     <include package="plone.app.registry" />
     <include package=".browser" />
-    
+
     <genericsetup:registerProfile
        name="default"
        title="World Plone Day Countdown"
@@ -15,11 +15,9 @@
        description="Countdown portlet for World Plone Day"
        provides="Products.GenericSetup.interfaces.EXTENSION"
      />
-               
+
     <i18n:registerTranslations directory="locales" />
-    
-    <include package=".upgrades" />
 
     <!-- -*- extra stuff goes here -*- -->
-    
+
 </configure>

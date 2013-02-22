@@ -1,15 +1,23 @@
 # -*- coding: utf-8 -*-
 from setuptools import setup, find_packages
-import os
 
 version = '2.0'
+
+long_description = (
+    open('README.txt').read()
+    + '\n\n' +
+    'History\n'
+    '=======\n'
+    + '\n\n' +
+    open('HISTORY.txt').read()
+    + '\n')
 
 setup(name='wpd.countdown',
       version=version,
       description="Countdown portlet for the World Plone Days",
-      long_description=open(os.path.join("README.txt")).read() + "\n" +
-                       open(os.path.join("docs", "HISTORY.txt")).read(),
-      # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
+      long_description=long_description,
+      # Get more strings from
+      # http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
         "Framework :: Plone",
         "Framework :: Zope2",
@@ -23,7 +31,7 @@ setup(name='wpd.countdown',
       url='https://github.com/collective/wpd.countdown',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
-      namespace_packages=['wpd',],
+      namespace_packages=['wpd'],
       include_package_data=True,
       zip_safe=False,
       install_requires=[
@@ -37,4 +45,3 @@ setup(name='wpd.countdown',
       target = plone
       """,
       )
-
