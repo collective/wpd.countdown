@@ -1,35 +1,29 @@
-.. contents:: Table of Contents
-   :depth: 2
-
 wpd.countdown
-****************************************
+*************
 
 Overview
 --------
 
-A package containing a portlet to display a countdown to the World Plone Day.
+A portlet to display a countdown to the World Plone Day.
 
 Requirements
 ------------
 
-   * Plone 4.0.x (http://plone.org/products/plone)
-    
+This product works with Plone 4.x
+
+
 Installation
 ------------
-    
+
 To enable this product,on a buildout based installation:
 
-    1. Edit your buildout.cfg and add ``wpd.countdown``
-       to the list of eggs to install ::
+    Edit your buildout.cfg and add ``wpd.countdown``
+    to the list of eggs to install ::
 
         [buildout]
         ...
-        eggs = 
+        eggs =
             wpd.countdown
-
-If another package depends on the wpd.countdown egg or 
-includes its zcml directly you do not need to specify anything in the 
-buildout configuration: buildout will detect this automatically.
 
 After updating the configuration you need to run the ''bin/buildout'',
 which will take care of updating your system.
@@ -39,30 +33,27 @@ Go to the 'Site Setup' page in the Plone interface and click on the
 
 Choose the product (check its checkbox) and click the 'Install' button.
 
-Uninstall -- This can be done from the same management screen, but only
-if you installed it from the quick installer.
 
-Note: You may have to empty your browser cache and save your resource registries
-in order to see the effects of the product installation.
+Development
+-----------
 
-Sponsoring
-----------
+Development of this product was done by:
 
-Development of this product was sponsored by `Simples Consultoria 
-<http://www.simplesconsultoria.com.br/>`_.
+* `Simples Consultoria <http://www.simplesconsultoria.com.br/>`_
+* `Starzel.de <http://www.starzel.de/>`_
 
 
 Credits
 -------
-    
+
     * Philip Bauer (pbauer at starzel.de) - Packaging, review, documentation
-    
+
     * Steffen Lindner (mail at steffen-lindner.de) - Update to Version 2
 
     * André Nogueira (andre at simplesconsultoria.com.br) - Idea, layout
 
-    * Davi Lima (davilima at simplesconsultoria.com.br) - Idea, 
+    * Davi Lima (davilima at simplesconsultoria.com.br) - Idea,
       planning and lines of code
-    
+
     * Érico Andrei (erico at simplesconsultoria.com.br) - Packaging, i18n
-    
+
