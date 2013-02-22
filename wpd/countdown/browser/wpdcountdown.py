@@ -65,6 +65,11 @@ class Renderer(base.Renderer):
         translation_service = getToolByName(self, 'translation_service')
         return translation_service.ulocalized_time(self.getDate())
 
+    def getUrl(self):
+        registry = getUtility(IRegistry)
+        settings = registry.forInterface(IWPDSchema)
+        return settings.wpd_url
+ 
     @property
     def isToday(self):
         return self.days()==0
