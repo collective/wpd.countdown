@@ -50,10 +50,10 @@ Credits
 
 * Steffen Lindner (mail at steffen-lindner.de) - Update to Version 2
 
-* André Nogueira (andre at simplesconsultoria.com.br) - Idea, layout
+* Andre Nogueira (andre at simplesconsultoria.com.br) - Idea, layout
 
 * Davi Lima (davilima at simplesconsultoria.com.br) - Idea,
   planning and lines of code
 
-* Érico Andrei (erico at simplesconsultoria.com.br) - Packaging, i18n
+* Erico Andrei (erico at simplesconsultoria.com.br) - Packaging, i18n
 
