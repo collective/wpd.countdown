@@ -7,7 +7,7 @@ version = '2.0'
 setup(name='wpd.countdown',
       version=version,
       description="Countdown portlet for the World Plone Days",
-      long_description=open(os.path.join("wpd", "countdown", "README.txt")).read() + "\n" +
+      long_description=open(os.path.join("README.txt")).read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
