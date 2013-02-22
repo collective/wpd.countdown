@@ -1,7 +1,7 @@
 .. contents:: Table of Contents
    :depth: 2
 
-wpd.mmxi.countdown
+wpd.countdown
 ****************************************
 
 Overview
@@ -12,8 +12,6 @@ A package containing a portlet to display a countdown to the World Plone Day.
 Requirements
 ------------
 
-   * Plone 3.3.x (http://plone.org/products/plone)
-
    * Plone 4.0.x (http://plone.org/products/plone)
     
 Installation
@@ -21,15 +19,15 @@ Installation
     
 To enable this product,on a buildout based installation:
 
-    1. Edit your buildout.cfg and add ``wpd.mmxi.countdown``
+    1. Edit your buildout.cfg and add ``wpd.countdown``
        to the list of eggs to install ::
 
         [buildout]
         ...
         eggs = 
-            wpd.mmxi.countdown
+            wpd.countdown
 
-If another package depends on the wpd.mmxi.countdown egg or 
+If another package depends on the wpd.countdown egg or 
 includes its zcml directly you do not need to specify anything in the 
 buildout configuration: buildout will detect this automatically.
 
@@ -56,6 +54,10 @@ Development of this product was sponsored by `Simples Consultoria
 
 Credits
 -------
+    
+    * Philip Bauer (pbauer at starzel.de) - Packaging, review, documentation
+    
+    * Steffen Lindner (mail at steffen-lindner.de) - Update to Version 2
 
     * André Nogueira (andre at simplesconsultoria.com.br) - Idea, layout
 

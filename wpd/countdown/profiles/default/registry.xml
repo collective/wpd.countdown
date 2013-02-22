@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<registry>
+ <records interface="wpd.countdown.browser.views.IWPDSchema">
+ <value key="wpd_date">2013-04-24</value>
+ </records>
+</registry>

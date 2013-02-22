@@ -21,7 +21,7 @@ _PROFILE_ID = 'wpd.countdown:default'
 def doUpgrades(context):
     ''' If exists, run migrations
     '''
-    if context.readDataFile'wpd.countdown.txt') is None:
+    if context.readDataFile('wpd.countdown.txt') is None:
         return
     logger = logging.getLogger(_PROJECT)
     site = context.getSite()

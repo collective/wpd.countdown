@@ -21,7 +21,7 @@ border-radius: 10px;
         <img tal:attributes="src string:${context/@@plone_portal_state/portal_url}/++resource++wpd-logo.gif"
              alt="World Plone Day" />
     </a>
-
+    
     <div class="wpd-to-go" tal:condition="view/isFuture">
         <strong i18n:translate="days_to_go"><span tal:replace="view/days" i18n:name="days">60</span> days to go</strong>
     </div>
@@ -34,7 +34,7 @@ border-radius: 10px;
         <strong i18n:translate="days_since">><span tal:replace="view/days" i18n:name="days">60</span> since</strong>
     </div>
     
-    <div class="wpd-date" i18n:translate="">
+    <div tal:content="view/prettyDate" class="wpd-date" i18n:translate="">
         April 27th 2011
     </div>
 

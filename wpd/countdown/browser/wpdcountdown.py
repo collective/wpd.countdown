@@ -9,8 +9,13 @@ from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 from datetime import datetime
 
-from wpd.countdown import MessageFactory as _
+from Products.CMFCore.utils import getToolByName
 
+from wpd.countdown import MessageFactory as _
+from zope.component import getUtility
+from plone.registry.interfaces import IRegistry
+
+from wpd.countdown.browser.views import IWPDSchema
 
 class IWPDcountdown(IPortletDataProvider):
     """A portlet
@@ -44,13 +49,21 @@ class AddForm(base.NullAddForm):
 class Renderer(base.Renderer):
     """Portlet renderer.
     """
-    
-    day = datetime(2011, 4, 27)
+
+    def getDate(self):
+        registry = getUtility(IRegistry)
+        settings = registry.forInterface(IWPDSchema)
+        wpd_date = settings.wpd_date
+        return datetime(wpd_date.year, wpd_date.month, wpd_date.day)
     
     def days(self):
         now = datetime.now()
         today = datetime(now.year,now.month,now.day)
-        return (self.day - today).days
+        return (self.getDate() - today).days
+    
+    def prettyDate(self):
+        translation_service = getToolByName(self, 'translation_service')
+        return translation_service.ulocalized_time(self.getDate())
 
     @property
     def isToday(self):
@@ -63,8 +76,5 @@ class Renderer(base.Renderer):
     @property
     def isFuture(self):
         return self.days()>0
-        
 
     render = ViewPageTemplateFile('wpdcountdown.pt')
-
-

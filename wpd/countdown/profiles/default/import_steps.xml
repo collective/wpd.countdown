@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <import-steps>
- <import-step id="wpd.mmxi.countdown-upgrades" version="20100413-01"
-              handler="wpd.mmxi.countdown.setuphandlers.doUpgrades"
+ <import-step id="wpd.countdown-upgrades" version="20100413-01"
+              handler="wpd.countdown.setuphandlers.doUpgrades"
               title="Do upgrades">
   <dependency step="plone_content" />
   Do upgrades

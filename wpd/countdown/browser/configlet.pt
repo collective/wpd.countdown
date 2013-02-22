@@ -1,0 +1,65 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="here/prefs_main_template/macros/master"
+      i18n:domain="plone">
+
+<body>
+
+  <div metal:fill-slot="prefs_configlet_main">
+
+        <h1 class="documentFirstHeading" i18n:translate="">
+             PortKnox configuration
+        </h1>
+
+        <a href=""
+           class="link-parent"
+           tal:attributes="href string: $portal_url/plone_control_panel"
+           i18n:domain="plone"
+           i18n:translate="label_up_to_plone_setup">
+            Up to Site Setup
+        </a>
+
+        <form action="."
+              metal:define-macro="master"
+              tal:attributes="action request/URL;"
+              method="post"
+              class="edit-form enableUnloadProtection">
+
+            <fieldset>
+                <legend i18n:translate="">PortKnox configuration</legend>
+                <div class="field">
+
+                    <label i18n:translate=""
+                           for="Categories">
+                       Open or closed registration:
+                    </label>
+
+                    <div class="formHelp"
+                         i18n:translate="">
+                        Free registration for an owncloud user
+                    </div>
+
+                    <p tal:define="open view/get_open_registration">
+                        <input type="checkbox" name="registration_open" value="registration_open"
+                               tal:attributes="checked open;"> Registration is open<br>
+                    </p>
+                </div>
+
+            </fieldset>
+
+            <div id="actionsView" class="formControls">
+                <span class="actionButtons">
+                    <input name="portknox_config_save" value="Save" class="context" type="submit"
+                           i18n:attributes="value">
+                </span>
+            </div>
+
+        </form>
+
+  </div>
+
+</body>
+</html>

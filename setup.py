@@ -28,6 +28,8 @@ setup(name='wpd.countdown',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'plone.formwidget.datetime',
+          'plone.app.registry',
           # -*- Extra requirements: -*-
       ],
       entry_points="""
