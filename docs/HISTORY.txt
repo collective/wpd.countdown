@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.0 (unreleased)
+2.0 (2013-02-22)
 ----------------
 
 * configlet for date and link
